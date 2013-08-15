@@ -1590,7 +1590,7 @@ EXPR__out( Expression e, int paren, int previous_op ) {
             } else if( e == LITERAL_E ) {
                 wrap( "E" );
             } else {
-                wrap( "%g", e->u.real );
+                wrap( "%#g", e->u.real );
             }
             break;
         case binary_:
@@ -1815,7 +1815,7 @@ EXPRstring( char * buffer, Expression e ) {
             } else if( e == LITERAL_E ) {
                 strcpy( buffer, "E" );
             } else {
-                sprintf( buffer, "%g", e->u.real );
+                sprintf( buffer, "%#g", e->u.real );
             }
             break;
         case binary_:
