@@ -407,6 +407,14 @@ actual_parameters(A) ::= TOK_LEFT_PAREN TOK_RIGHT_PAREN.
     A = 0;
 }
 
+/* 10303-11:2004 production 185 bound_spec = '[' bound_1 ':' bound_2 ']' . */
+bound_spec(A) ::= TOK_LEFT_BRACKET expression(B) TOK_COLON expression(C)
+          TOK_RIGHT_BRACKET.
+{
+    A.lower_limit = B;
+    A.upper_limit = C;
+}
+
 /* I give up - why does 2nd parm of AGGR_LIT have to be non-null?  */
 aggregate_initializer(A) ::= TOK_LEFT_BRACKET TOK_RIGHT_BRACKET.
 {
@@ -1550,14 +1558,6 @@ inverse_clause(A) ::= /*NULL*/.
 inverse_clause(A) ::= TOK_INVERSE inverse_attr_list(B).
 {
     A = B;
-}
-
-/* 10303-11:2004 production 185 bound_spec = '[' bound_1 ':' bound_2 ']' . */
-bound_spec(A) ::= TOK_LEFT_BRACKET expression(B) TOK_COLON expression(C)
-		  TOK_RIGHT_BRACKET.
-{
-    A.lower_limit = B;
-    A.upper_limit = C;
 }
 
 list_type(A) ::= TOK_LIST bound_spec(B) TOK_OF unique(C) attribute_type(D).
