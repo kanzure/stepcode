@@ -2384,7 +2384,7 @@ static void yy_reduce(
 #line 430 "expparse.y"
 {
     yygotominor.yy471 = LISTcreate();
-    LISTadd(yygotominor.yy471, (Generic)yymsp[0].minor.yy145);
+    LISTadd_last(yygotominor.yy471, (Generic)yymsp[0].minor.yy145);
 }
 #line 2390 "expparse.c"
         break;
@@ -2392,9 +2392,9 @@ static void yy_reduce(
 #line 435 "expparse.y"
 {
     yygotominor.yy471 = LISTcreate();
-    LISTadd(yygotominor.yy471, (Generic)yymsp[-2].minor.yy145);
+    LISTadd_last(yygotominor.yy471, (Generic)yymsp[-2].minor.yy145);
 
-    LISTadd(yygotominor.yy471, (Generic)yymsp[0].minor.yy145);
+    LISTadd_last(yygotominor.yy471, (Generic)yymsp[0].minor.yy145);
 
     yymsp[-2].minor.yy145->type->u.type->body->flags.repeat = 1;
 }
@@ -3519,7 +3519,7 @@ static void yy_reduce(
         CURRENT_SCHEMA->ref_schemas = LISTcreate();
     }
 
-    LISTadd(CURRENT_SCHEMA->ref_schemas, (Generic)yymsp[-1].minor.yy0.symbol);
+    LISTadd_last(CURRENT_SCHEMA->ref_schemas, (Generic)yymsp[-1].minor.yy0.symbol);
 }
 #line 3525 "expparse.c"
         break;
@@ -3538,7 +3538,7 @@ static void yy_reduce(
         CURRENT_SCHEMA->use_schemas = LISTcreate();
     }
 
-    LISTadd(CURRENT_SCHEMA->use_schemas, (Generic)yymsp[-1].minor.yy0.symbol);
+    LISTadd_last(CURRENT_SCHEMA->use_schemas, (Generic)yymsp[-1].minor.yy0.symbol);
 }
 #line 3544 "expparse.c"
         break;
@@ -3780,7 +3780,7 @@ static void yy_reduce(
 #line 1699 "expparse.y"
 {
     yygotominor.yy471 = LISTcreate();
-    LISTadd(yygotominor.yy471, (Generic)yymsp[0].minor.yy155);
+    LISTadd_last(yygotominor.yy471, (Generic)yymsp[0].minor.yy155);
 
 }
 #line 3787 "expparse.c"
@@ -4098,7 +4098,7 @@ static void yy_reduce(
 #line 1973 "expparse.y"
 {
     yygotominor.yy471 = LISTcreate();
-    LISTadd(yygotominor.yy471, (Generic)yymsp[0].minor.yy443); 
+    LISTadd_last(yygotominor.yy471, (Generic)yymsp[0].minor.yy443); 
 }
 #line 4104 "expparse.c"
         break;
@@ -4494,7 +4494,7 @@ static void yy_reduce(
 #line 2430 "expparse.y"
 {
     yygotominor.yy471 = LISTcreate();
-    LISTadd(yygotominor.yy471, (Generic)yymsp[0].minor.yy428);
+    LISTadd_last(yygotominor.yy471, (Generic)yymsp[0].minor.yy428);
 }
 #line 4500 "expparse.c"
         break;
