@@ -159,7 +159,9 @@ struct TypeBody_ {
         unsigned optional   : 1;
         unsigned fixed      : 1;
         unsigned shared     : 1; /**< type is shared */
-        unsigned repeat     : 1; /**< expression is a repeat count*/
+        unsigned repeat     : 1; /**< expression is a repeat count - as in the 10303-11:2004 production #203 -
+                                   *   element = expression [ ':' repetition ] .
+                                   */
         unsigned encoded    : 1; /**< encoded string */
     } flags;
     Type base;      /**< underlying base type if any can also contain true type if this type is a type reference */
