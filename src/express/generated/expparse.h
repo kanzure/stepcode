@@ -26,8 +26,8 @@
 #define TOK_LEFT_BRACKET               26
 #define TOK_LEFT_PAREN                 27
 #define TOK_RIGHT_PAREN                28
-#define TOK_RIGHT_BRACKET              29
-#define TOK_COLON                      30
+#define TOK_COLON                      29
+#define TOK_RIGHT_BRACKET              30
 #define TOK_COMMA                      31
 #define TOK_AGGREGATE                  32
 #define TOK_OF                         33
