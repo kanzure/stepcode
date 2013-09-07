@@ -221,7 +221,6 @@ void
 EXPRESSout( Express e ) {
     Schema s;
     DictionaryEntry de;
-    char ** hp;
 
     exppp_init();
 
@@ -1645,7 +1644,7 @@ EXPR__out( Expression e, int paren, unsigned int previous_op ) {
             i = 0;
             LISTdo( e->u.list, arg, Expression ) {
                 bool repeat = arg->type->u.type->body->flags.repeat;
-                //if repeat is true, the previous Expression repeats and this one is the count
+                /* if repeat is true, the previous Expression repeats and this one is the count */
                 i++;
                 if( i != 1 ) {
                     if( repeat ) {
@@ -1879,7 +1878,7 @@ EXPRstring( char * buffer, Expression e ) {
             i = 0;
             LISTdo( e->u.list, arg, Expression ) {
                 bool repeat = arg->type->u.type->body->flags.repeat;
-                //if repeat is true, the previous Expression repeats and this one is the count
+                /* if repeat is true, the previous Expression repeats and this one is the count */
                 i++;
                 if( i != 1 ) {
                     if( repeat ) {
